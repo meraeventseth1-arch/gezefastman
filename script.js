@@ -26,6 +26,15 @@ function initCountdown() {
   const hcdMins = document.getElementById("hcd-mins");
   const hcdSecs = document.getElementById("hcd-secs");
 
+  // Sticky top-of-page countdown (lives in the language bar, so it
+  // stays visible while scrolling — unlike the hero one, which scrolls
+  // away with the banner image).
+  const topCd = document.getElementById("top-countdown");
+  const tcdDays = document.getElementById("tcd-days");
+  const tcdHours = document.getElementById("tcd-hours");
+  const tcdMins = document.getElementById("tcd-mins");
+  const tcdSecs = document.getElementById("tcd-secs");
+
   function tick() {
     const diff = SALE_END.getTime() - Date.now();
 
@@ -33,6 +42,7 @@ function initCountdown() {
       clearInterval(timer);
       wrap.hidden = true;
       if (heroCd) heroCd.hidden = true;
+      if (topCd) topCd.hidden = true;
       buyBtn.disabled = true;
       buyBtn.setAttribute("data-i18n", "buy_button_ended");
       buyBtn.textContent = t("buy_button_ended");
@@ -55,6 +65,12 @@ function initCountdown() {
     if (hcdHours) hcdHours.textContent = pad(hours);
     if (hcdMins) hcdMins.textContent = pad(mins);
     if (hcdSecs) hcdSecs.textContent = pad(secs);
+
+    // Mirror to sticky top bar
+    if (tcdDays) tcdDays.textContent = pad(days);
+    if (tcdHours) tcdHours.textContent = pad(hours);
+    if (tcdMins) tcdMins.textContent = pad(mins);
+    if (tcdSecs) tcdSecs.textContent = pad(secs);
   }
 
   tick();
@@ -279,7 +295,7 @@ function finishOrder(container, reference, payload) {
   );
 
   container.innerHTML = `
-    <div class="order__success">
+    <div class="order__success order__success--payment">
       <h3>${t("success_heading")}</h3>
       <p>${t("success_ref_label")}</p>
       <p class="order__ref">${reference}</p>

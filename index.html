@@ -22,9 +22,20 @@
   <body>
     <div class="lang-bar">
       <div class="wrap lang-bar__inner">
-        <button class="lang-btn" id="lang-en" type="button">English</button>
-        <span class="lang-bar__sep">/</span>
-        <button class="lang-btn" id="lang-am" type="button">አማርኛ</button>
+        <div class="lang-bar__langs">
+          <button class="lang-btn" id="lang-en" type="button">English</button>
+          <span class="lang-bar__sep">/</span>
+          <button class="lang-btn" id="lang-am" type="button">አማርኛ</button>
+        </div>
+        <div class="top-countdown" id="top-countdown">
+          <span class="top-countdown__label" data-i18n="countdown_label">Ticket sales end in</span>
+          <div class="top-countdown__digits">
+            <span class="top-countdown__unit"><span id="tcd-days">00</span><small data-i18n="days">Days</small></span>
+            <span class="top-countdown__unit"><span id="tcd-hours">00</span><small data-i18n="hours">Hrs</small></span>
+            <span class="top-countdown__unit"><span id="tcd-mins">00</span><small data-i18n="mins">Min</small></span>
+            <span class="top-countdown__unit"><span id="tcd-secs">00</span><small data-i18n="secs">Sec</small></span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -145,12 +156,12 @@
         </div>
 
         <div class="sponsor-row">
-          <span>Fanta</span>
-          <span>Mera Events</span>
-          <span>Bedele Special</span>
-          <span>Ethio Telecom</span>
-          <span>telebirr</span>
-          <span>ልዩ ድግስ</span>
+          <span class="sponsor-row__chip">Fanta</span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/mera-events.png" alt="Mera Events" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/bedele-special.jpg" alt="Bedele Special" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/ethio-telecom.jpg" alt="Ethio Telecom" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/telebirr.jpg" alt="telebirr" /></span>
+          <span class="sponsor-row__chip">ልዩ ድግስ</span>
         </div>
       </div>
     </section>

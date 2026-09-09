@@ -96,9 +96,84 @@ button {
 .lang-bar__inner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
   padding: 8px 24px;
+}
+
+.lang-bar__langs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ---------- Sticky top-of-page countdown ---------- */
+/* Lives in the same sticky bar as the language toggle, so — unlike the
+   hero countdown, which scrolls away with the banner image — this one
+   stays visible the entire time the visitor is on the page. */
+.top-countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.top-countdown__label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.top-countdown__digits {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.top-countdown__unit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  background: rgba(217, 164, 65, 0.14);
+  border: 1px solid rgba(217, 164, 65, 0.35);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: "Fraunces", serif;
+}
+
+.top-countdown__unit span {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--gold-bright, #d9a441);
+}
+
+.top-countdown__unit small {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-left: 1px;
+}
+
+.top-countdown[hidden] {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .lang-bar__inner {
+    justify-content: center;
+  }
+  .top-countdown {
+    width: 100%;
+    justify-content: center;
+  }
+  .top-countdown__label {
+    display: none;
+  }
 }
 
 .lang-btn {
@@ -403,9 +478,38 @@ section {
   border-top: 1px solid var(--line);
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 28px;
+  align-items: center;
+  gap: 14px 24px;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.sponsor-row__chip {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sponsor-row__chip--img {
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  height: 30px;
+  box-sizing: content-box;
+}
+
+.sponsor-row__chip--img img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .sponsor-row__chip--img {
+    height: 24px;
+    padding: 5px 10px;
+  }
 }
 
 /* ---------- Package / ticket stub ---------- */
@@ -1047,6 +1151,51 @@ section {
   color: #e39b9b;
   font-size: 0.85rem;
   margin-top: 4px;
+}
+
+/* ── Sunflower-themed payment card ── */
+/* Enkutatash is celebrated with fields of golden Adey Abeba flowers, so
+   the payment step (Telebirr box + screenshot upload) gets a sunflower
+   motif: a soft tiled pattern behind everything, plus bigger blooms
+   tucked in the corners. Pure CSS/SVG — no extra image requests. */
+.order__success--payment {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(4, 10, 24, 0.75);
+  background-image: 
+    radial-gradient(circle at 8% 8%, rgba(217, 164, 65, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 92% 90%, rgba(217, 164, 65, 0.16) 0%, transparent 42%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='120'%20viewBox='0%200%20120%20120'%3E%3Cg%20fill='none'%20stroke='%23d9a441'%20stroke-width='1.4'%20opacity='0.35'%3E%3Cg%20transform='translate(20,20)'%3E%3Cellipse%20cx='0'%20cy='-14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='0'%20cy='14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='-14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='-10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(45%20-10%20-10)'/%3E%3Cellipse%20cx='10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(-45%2010%20-10)'/%3E%3Cellipse%20cx='-10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(-45%20-10%2010)'/%3E%3Cellipse%20cx='10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(45%2010%2010)'/%3E%3Ccircle%20r='6'%20fill='%23d9a441'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='translate(90,70)%20scale(0.7)'%3E%3Cellipse%20cx='0'%20cy='-14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='0'%20cy='14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='-14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='-10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(45%20-10%20-10)'/%3E%3Cellipse%20cx='10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(-45%2010%20-10)'/%3E%3Cellipse%20cx='-10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(-45%20-10%2010)'/%3E%3Cellipse%20cx='10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(45%2010%2010)'/%3E%3Ccircle%20r='6'%20fill='%23d9a441'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='translate(50,95)%20scale(0.5)'%3E%3Cellipse%20cx='0'%20cy='-14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='0'%20cy='14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='-14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='-10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(45%20-10%20-10)'/%3E%3Cellipse%20cx='10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(-45%2010%20-10)'/%3E%3Cellipse%20cx='-10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(-45%20-10%2010)'/%3E%3Cellipse%20cx='10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(45%2010%2010)'/%3E%3Ccircle%20r='6'%20fill='%23d9a441'%20stroke='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 130px 130px, 240px 240px, 200px 200px;
+  background-position: center, top left, bottom right;
+}
+
+.order__success--payment::before {
+  content: "🌻";
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  font-size: 2.6rem;
+  opacity: 0.5;
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+
+.order__success--payment::after {
+  content: "🌻";
+  position: absolute;
+  bottom: -16px;
+  left: 6px;
+  font-size: 2.2rem;
+  opacity: 0.4;
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+.order__success--payment > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Telebirr deposit box ── */
