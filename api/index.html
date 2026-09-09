@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Enkutatash Concert — Ghion Hotel | Fanta x Mera Events</title>
+    <meta
+      name="description"
+      content="Enkutatash Concert at Ghion Hotel, Pagume 5 (September 10). Featuring Efrem Tamiru, Gossaye Tesfaye, Leul Sisay, MC Siyamregn and Milu."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="lang-bar">
+      <div class="wrap lang-bar__inner">
+        <div class="lang-bar__langs">
+          <button class="lang-btn" id="lang-en" type="button">English</button>
+          <span class="lang-bar__sep">/</span>
+          <button class="lang-btn" id="lang-am" type="button">አማርኛ</button>
+        </div>
+        <div class="top-countdown" id="top-countdown">
+          <span class="top-countdown__label" data-i18n="countdown_label">Ticket sales end in</span>
+          <div class="top-countdown__digits">
+            <span class="top-countdown__unit"><span id="tcd-days">00</span><small data-i18n="days">Days</small></span>
+            <span class="top-countdown__unit"><span id="tcd-hours">00</span><small data-i18n="hours">Hrs</small></span>
+            <span class="top-countdown__unit"><span id="tcd-mins">00</span><small data-i18n="mins">Min</small></span>
+            <span class="top-countdown__unit"><span id="tcd-secs">00</span><small data-i18n="secs">Sec</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <p class="hero__presents" data-i18n="presents_line">Fanta x Mera Events Presents</p>
+      <img
+        class="hero__banner"
+        src="images/hero-group-main.jpg"
+        alt="Enkutatash Concert — Efrem Tamiru, Gossaye Tesfaye and Leul Sisay, at Ghion Hotel, Pagume 5."
+      />
+      <div class="hero__cta-bar">
+        <div class="wrap hero__cta-bar-inner">
+          <div class="hero__countdown" id="hero-countdown">
+            <div class="hero__cd-unit">
+              <span id="hcd-days">00</span>
+              <small data-i18n="days">Days</small>
+            </div>
+            <div class="hero__cd-sep">:</div>
+            <div class="hero__cd-unit">
+              <span id="hcd-hours">00</span>
+              <small data-i18n="hours">Hrs</small>
+            </div>
+            <div class="hero__cd-sep">:</div>
+            <div class="hero__cd-unit">
+              <span id="hcd-mins">00</span>
+              <small data-i18n="mins">Min</small>
+            </div>
+            <div class="hero__cd-sep">:</div>
+            <div class="hero__cd-unit">
+              <span id="hcd-secs">00</span>
+              <small data-i18n="secs">Sec</small>
+            </div>
+          </div>
+          <button
+            class="btn"
+            type="button"
+            id="hero-buy-btn"
+            data-i18n="hero_cta"
+          >
+            Buy Tickets
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="lineup" id="lineup">
+      <div class="lineup__head wrap">
+        <p class="section__label">The Lineup</p>
+        <h2 class="section__heading">Performing Live</h2>
+      </div>
+      <div class="lineup__scroll-track">
+        <div class="lineup__card">
+          <img
+            src="images/promo-efrem-gossaye.jpg"
+            alt="Efrem Tamiru and Gossaye Tesfaye live"
+            class="lineup__img"
+          />
+          <div class="lineup__caption">Efrem Tamiru &amp; Gossaye Tesfaye</div>
+        </div>
+        <div class="lineup__card">
+          <img
+            src="images/promo-gossaye-1.jpg"
+            alt="Gossaye Tesfaye live"
+            class="lineup__img"
+          />
+          <div class="lineup__caption">Gossaye Tesfaye</div>
+        </div>
+        <div class="lineup__card">
+          <img
+            src="images/promo-leul-sisay.jpg"
+            alt="Leul Sisay live"
+            class="lineup__img"
+          />
+          <div class="lineup__caption">Leul Sisay</div>
+        </div>
+        <div class="lineup__card">
+          <img
+            src="images/promo-milu-mc-siyamregn.jpg"
+            alt="Milu and MC Siyamregn live"
+            class="lineup__img"
+          />
+          <div class="lineup__caption">Milu &amp; MC Siyamregn</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue">
+      <div class="wrap">
+        <p class="section__label" data-i18n="venue_label">The venue</p>
+        <div class="venue__grid">
+          <div class="venue__body">
+            <h2 class="section__heading" data-i18n="venue_heading">
+              An Enkutatash night at Ghion Hotel
+            </h2>
+            <p data-i18n="venue_body">
+              Ring in the new year with Efrem Tamiru, Gossaye Tesfaye, Leul
+              Sisay, MC Siyamregn and Milu, live at Ghion Hotel — one night
+              of music, food, and celebration.
+            </p>
+          </div>
+          <dl class="venue__facts">
+            <div class="fact">
+              <dt data-i18n="fact_location_label">Location</dt>
+              <dd data-i18n="fact_location_value">Ghion Hotel</dd>
+            </div>
+            <div class="fact">
+              <dt data-i18n="fact_date_label">Date</dt>
+              <dd data-i18n="fact_date_value">Pagume 5 (September 10)</dd>
+            </div>
+            <div class="fact">
+              <dt data-i18n="fact_vvip_label">VVIP includes</dt>
+              <dd data-i18n="fact_vvip_value">
+                Dinner, tire siga and tibs, with the closest seats to the
+                stage
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="sponsor-row">
+          <span class="sponsor-row__chip">Fanta</span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/mera-events.png" alt="Mera Events" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/bedele-special.jpg" alt="Bedele Special" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/ethio-telecom.jpg" alt="Ethio Telecom" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img"><img src="images/sponsors/telebirr.jpg" alt="telebirr" /></span>
+          <span class="sponsor-row__chip sponsor-row__chip--img sponsor-row__chip--liyu"><img src="images/sponsors/liyu-digs.png" alt="ልዩ ድግስ" /></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="tickets">
+      <div class="wrap">
+        <p class="section__label" data-i18n="tickets_label">Tickets</p>
+        <h2 class="section__heading" data-i18n="tickets_heading">
+          Enkutatash Concert — pick your tier
+        </h2>
+
+        <div class="package">
+          <div class="stub">
+            <div class="stub__top">
+              <span class="stub__name" data-i18n="package_name"
+                >Enkutatash Concert</span
+              >
+            </div>
+
+            <ul class="price-table" id="price-table">
+              <li class="price-table__row price-table__row--soldout">
+                <span data-i18n="tier_first_wave_name">First Wave</span>
+                <span class="price-table__price">600 <small>ETB</small></span>
+                <span class="price-table__tag" data-i18n="sold_out">Sold out</span>
+              </li>
+              <li class="price-table__row">
+                <span data-i18n="tier_gate_name">At the Gate</span>
+                <span class="price-table__price">1,500 <small>ETB</small></span>
+              </li>
+              <li class="price-table__row">
+                <span data-i18n="tier_vip_name">VIP</span>
+                <span class="price-table__price">2,500 <small>ETB</small></span>
+              </li>
+              <li class="price-table__row">
+                <span data-i18n="tier_vvip_name">VVIP</span>
+                <span class="price-table__price">8,000 <small>ETB</small></span>
+              </li>
+            </ul>
+            <p class="stub__note" data-i18n="stub_note">
+              VVIP includes dinner, tire siga and tibs, with the closest
+              seats to the stage. Entry is 21 and over.
+            </p>
+            <div class="restrictions">
+              <span data-i18n="restriction_1">21+</span>
+              <span data-i18n="restriction_2">No outside food or drink</span>
+              <span data-i18n="restriction_3">No weapons</span>
+            </div>
+
+            <div class="countdown" id="countdown">
+              <p class="countdown__label" data-i18n="countdown_label">
+                Ticket sales end in
+              </p>
+              <div class="countdown__digits">
+                <div class="countdown__unit">
+                  <span id="cd-days">00</span>
+                  <small data-i18n="days">Days</small>
+                </div>
+                <div class="countdown__unit">
+                  <span id="cd-hours">00</span>
+                  <small data-i18n="hours">Hrs</small>
+                </div>
+                <div class="countdown__unit">
+                  <span id="cd-mins">00</span>
+                  <small data-i18n="mins">Min</small>
+                </div>
+                <div class="countdown__unit">
+                  <span id="cd-secs">00</span>
+                  <small data-i18n="secs">Sec</small>
+                </div>
+              </div>
+              <p class="countdown__target" data-i18n="countdown_target">
+                Pagume 5, 12:00 PM (Addis Ababa time)
+              </p>
+            </div>
+
+            <button
+              class="btn btn--buy"
+              id="buy-tickets-btn"
+              data-i18n="buy_button_active"
+            >
+              Buy Tickets
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer__row">
+        <span data-i18n="footer_title">Enkutatash Concert — Fanta x Mera Events</span>
+        <span data-i18n="footer_location">Ghion Hotel, Addis Ababa</span>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay" hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button class="modal__close" id="modal-close" aria-label="Close">
+          &times;
+        </button>
+
+        <div id="modal-body">
+          <p class="order__disclaimer" data-i18n="modal_intro">
+            <span class="order__disclaimer-icon">🎫</span>
+            Fill in your details to reserve your tickets. Payment is currently
+            handled manually — you'll be contacted directly to complete it.
+          </p>
+
+          <div id="order-form-container">
+            <form id="order-form" novalidate>
+              <div class="field">
+                <label for="fullName" data-i18n="field_fullname"
+                  >Full name</label
+                >
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="field">
+                <label for="phone" data-i18n="field_phone">Phone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  autocomplete="tel"
+                  placeholder="+251 9xx xxx xxx"
+                />
+              </div>
+
+              <div class="field">
+                <label data-i18n="field_package">Tickets</label>
+                <div class="ticket-picker" id="ticket-picker">
+                  <div class="ticket-picker__row ticket-picker__row--soldout">
+                    <div class="ticket-picker__info">
+                      <span
+                        class="ticket-picker__name"
+                        data-i18n="tier_first_wave_name"
+                        >First Wave</span
+                      >
+                      <span class="ticket-picker__price">600 ETB</span>
+                      <span class="seats-left sold-out-tag" data-i18n="sold_out">Sold out</span>
+                    </div>
+                  </div>
+                  <div class="ticket-picker__row" data-package="gate">
+                    <div class="ticket-picker__info">
+                      <span
+                        class="ticket-picker__name"
+                        data-i18n="tier_gate_name"
+                        >At the Gate</span
+                      >
+                      <span class="ticket-picker__price">1,500 ETB</span>
+                    </div>
+                    <div class="stepper">
+                      <button
+                        type="button"
+                        class="stepper__btn"
+                        data-decrease="gate"
+                        aria-label="Decrease At the Gate tickets"
+                      >
+                        &minus;
+                      </button>
+                      <span class="stepper__value" id="qty-gate">1</span>
+                      <button
+                        type="button"
+                        class="stepper__btn"
+                        data-increase="gate"
+                        aria-label="Increase At the Gate tickets"
+                      >
+                        &plus;
+                      </button>
+                    </div>
+                  </div>
+                  <div class="ticket-picker__row" data-package="vip">
+                    <div class="ticket-picker__info">
+                      <span
+                        class="ticket-picker__name"
+                        data-i18n="tier_vip_name"
+                        >VIP</span
+                      >
+                      <span class="ticket-picker__price">2,500 ETB</span>
+                    </div>
+                    <div class="stepper">
+                      <button
+                        type="button"
+                        class="stepper__btn"
+                        data-decrease="vip"
+                        aria-label="Decrease VIP tickets"
+                      >
+                        &minus;
+                      </button>
+                      <span class="stepper__value" id="qty-vip">0</span>
+                      <button
+                        type="button"
+                        class="stepper__btn"
+                        data-increase="vip"
+                        aria-label="Increase VIP tickets"
+                      >
+                        &plus;
+                      </button>
+                    </div>
+                  </div>
+                  <div class="ticket-picker__row" data-package="vvip">
+                    <div class="ticket-picker__info">
+                      <span
+                        class="ticket-picker__name"
+                        data-i18n="tier_vvip_name"
+                        >VVIP</span
+                      >
+                      <span class="ticket-picker__price">8,000 ETB</span>
+                    </div>
+                    <div class="stepper">
+                      <button
+                        type="button"
+                        class="stepper__btn"
+                        data-decrease="vvip"
+                        aria-label="Decrease VVIP tickets"
+                      >
+                        &minus;
+                      </button>
+                      <span class="stepper__value" id="qty-vvip">0</span>
+                      <button
+                        type="button"
+                        class="stepper__btn"
+                        data-increase="vvip"
+                        aria-label="Increase VVIP tickets"
+                      >
+                        &plus;
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <p
+                  class="ticket-picker__hint"
+                  id="ticket-picker-hint"
+                  data-i18n="ticket_picker_hint"
+                >
+                  Mix and match — pick any number of each.
+                </p>
+              </div>
+
+              <div class="order__total">
+                <span data-i18n="total_label">Total</span>
+                <strong id="order-total">1,500 ETB</strong>
+              </div>
+
+              <button
+                class="btn"
+                type="submit"
+                id="order-submit"
+                data-i18n="submit_button"
+              >
+                Reserve tickets
+              </button>
+
+              <p class="order__error" id="order-error" hidden></p>
+
+              <p class="order__disclaimer" data-i18n="order_disclaimer">
+                This reserves your order. Payment is handled manually for now —
+                you'll be contacted to complete payment and confirm your ticket.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendor/qrcode.min.js"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
