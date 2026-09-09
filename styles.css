@@ -512,6 +512,22 @@ section {
   }
 }
 
+/* This particular mark has its own gold background baked in (not a
+   transparent/white-bg logo like the others), so it skips the white
+   chip plate and just gets rounded corners + a touch more height so
+   the lettering stays legible at sponsor-row size. */
+.sponsor-row__chip--liyu {
+  background: none;
+  padding: 0;
+  height: 34px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sponsor-row__chip--liyu img {
+  height: 100%;
+}
+
 /* ---------- Package / ticket stub ---------- */
 
 .package {
@@ -764,12 +780,16 @@ section {
   box-shadow: none;
 }
 
-/* Dark frosted center so form content is readable over the image */
+/* Dark frosted center so form content is readable over the image.
+   Lowered from 0.78 → 0.45: at 0.78 the sunflower/fireworks background
+   was almost invisible on both the ticket-picker step and the payment
+   step — this keeps text readable while letting the flowers actually
+   show through on both. */
 .modal::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(4, 10, 24, 0.78);
+  background: rgba(4, 10, 24, 0.45);
   border-radius: 0;
   pointer-events: none;
   z-index: 0;
@@ -1104,7 +1124,7 @@ section {
   padding: 14px 16px;
   border: 2.5px solid rgba(217, 164, 65, 0.65);
   border-radius: 20px;
-  background: rgba(4, 10, 24, 0.65);
+  background: rgba(4, 10, 24, 0.5);
   box-shadow: 0 0 16px rgba(217, 164, 65, 0.18);
   display: flex;
   gap: 12px;
@@ -1118,7 +1138,7 @@ section {
 
 .order__success {
   border: 2.5px solid rgba(217, 164, 65, 0.65);
-  background: rgba(4, 10, 24, 0.75);
+  background: rgba(4, 10, 24, 0.55);
   padding: 22px 18px;
   border-radius: 28px;
   box-shadow: 0 0 28px rgba(217, 164, 65, 0.2),
@@ -1153,22 +1173,15 @@ section {
   margin-top: 4px;
 }
 
-/* ── Sunflower-themed payment card ── */
-/* Enkutatash is celebrated with fields of golden Adey Abeba flowers, so
-   the payment step (Telebirr box + screenshot upload) gets a sunflower
-   motif: a soft tiled pattern behind everything, plus bigger blooms
-   tucked in the corners. Pure CSS/SVG — no extra image requests. */
+/* ── Sunflower accents on the payment card ── */
+/* The modal itself now shows the real sunflower/fireworks background
+   (see .modal::before above — its overlay was too dark before), so
+   this card just needs to stay translucent enough to let that show
+   through, plus a couple of small sunflower accents of its own. */
 .order__success--payment {
   position: relative;
   overflow: hidden;
-  background-color: rgba(4, 10, 24, 0.75);
-  background-image: 
-    radial-gradient(circle at 8% 8%, rgba(217, 164, 65, 0.18) 0%, transparent 40%),
-    radial-gradient(circle at 92% 90%, rgba(217, 164, 65, 0.16) 0%, transparent 42%),
-    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='120'%20viewBox='0%200%20120%20120'%3E%3Cg%20fill='none'%20stroke='%23d9a441'%20stroke-width='1.4'%20opacity='0.35'%3E%3Cg%20transform='translate(20,20)'%3E%3Cellipse%20cx='0'%20cy='-14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='0'%20cy='14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='-14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='-10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(45%20-10%20-10)'/%3E%3Cellipse%20cx='10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(-45%2010%20-10)'/%3E%3Cellipse%20cx='-10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(-45%20-10%2010)'/%3E%3Cellipse%20cx='10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(45%2010%2010)'/%3E%3Ccircle%20r='6'%20fill='%23d9a441'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='translate(90,70)%20scale(0.7)'%3E%3Cellipse%20cx='0'%20cy='-14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='0'%20cy='14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='-14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='-10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(45%20-10%20-10)'/%3E%3Cellipse%20cx='10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(-45%2010%20-10)'/%3E%3Cellipse%20cx='-10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(-45%20-10%2010)'/%3E%3Cellipse%20cx='10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(45%2010%2010)'/%3E%3Ccircle%20r='6'%20fill='%23d9a441'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='translate(50,95)%20scale(0.5)'%3E%3Cellipse%20cx='0'%20cy='-14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='0'%20cy='14'%20rx='5'%20ry='9'/%3E%3Cellipse%20cx='-14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='14'%20cy='0'%20rx='9'%20ry='5'/%3E%3Cellipse%20cx='-10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(45%20-10%20-10)'/%3E%3Cellipse%20cx='10'%20cy='-10'%20rx='6'%20ry='9'%20transform='rotate(-45%2010%20-10)'/%3E%3Cellipse%20cx='-10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(-45%20-10%2010)'/%3E%3Cellipse%20cx='10'%20cy='10'%20rx='6'%20ry='9'%20transform='rotate(45%2010%2010)'/%3E%3Ccircle%20r='6'%20fill='%23d9a441'%20stroke='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-size: 130px 130px, 240px 240px, 200px 200px;
-  background-position: center, top left, bottom right;
+  background: rgba(4, 10, 24, 0.5);
 }
 
 .order__success--payment::before {
@@ -1313,7 +1326,7 @@ section {
   padding: 18px 16px 20px;
   border: 2.5px solid rgba(217, 164, 65, 0.65);
   border-radius: 28px;
-  background: rgba(4, 10, 24, 0.65);
+  background: rgba(4, 10, 24, 0.5);
   box-shadow: 0 0 24px rgba(217, 164, 65, 0.2);
   display: grid;
   gap: 12px;
