@@ -42,7 +42,7 @@ const translations = {
     restriction_3: "No weapons",
 
     countdown_label: "Ticket sales end in",
-    countdown_target: "Pagume 5, 12:00 PM (Addis Ababa time)",
+    countdown_target: "Pagume 5, 8:00 PM (Addis Ababa time)",
     days: "Days",
     hours: "Hrs",
     mins: "Min",
@@ -137,7 +137,7 @@ const translations = {
     restriction_3: "የጦር መሳሪያ አይፈቀድም",
 
     countdown_label: "የትኬት ሽያጭ የሚያበቃው በ",
-    countdown_target: "ጳጉሜ 5፣ 12:00 ሰዓት (የአዲስ አበባ ሰዓት)",
+    countdown_target: "ጳጉሜ 5፣ 8:00 ሰዓት (የአዲስ አበባ ሰዓት)",
     days: "ቀናት",
     hours: "ሰዓት",
     mins: "ደቂቃ",

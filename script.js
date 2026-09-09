@@ -5,7 +5,7 @@
 // on September 10, 2026 in the Gregorian calendar — the day the
 // countdown counts down to. Adjust this if sales should close closer
 // to doors-open time instead.
-const SALE_END = new Date("2026-09-10T12:00:00+03:00");
+const SALE_END = new Date("2026-09-10T20:00:00+03:00");
 
 function initCountdown() {
   const wrap = document.getElementById("countdown");
@@ -46,6 +46,12 @@ function initCountdown() {
       buyBtn.disabled = true;
       buyBtn.setAttribute("data-i18n", "buy_button_ended");
       buyBtn.textContent = t("buy_button_ended");
+      const topBuyBtn = document.getElementById("top-buy-btn");
+      if (topBuyBtn) {
+        topBuyBtn.disabled = true;
+        topBuyBtn.setAttribute("data-i18n", "buy_button_ended");
+        topBuyBtn.textContent = t("buy_button_ended");
+      }
       return;
     }
 
@@ -83,6 +89,7 @@ function initModal() {
   const overlay = document.getElementById("modal-overlay");
   const buyBtn = document.getElementById("buy-tickets-btn");
   const heroBuyBtn = document.getElementById("hero-buy-btn");
+  const topBuyBtn = document.getElementById("top-buy-btn");
   const closeBtn = document.getElementById("modal-close");
 
   function openModal() {
@@ -103,6 +110,12 @@ function initModal() {
   // Hero button mirrors the in-section Buy Tickets button — same
   // disabled state (sales-closed), same modal, no more scroll-to-form.
   heroBuyBtn?.addEventListener("click", () => {
+    if (!buyBtn.disabled) openModal();
+  });
+
+  // Sticky top-corner button — same behaviour, always reachable
+  // without scrolling since it lives in the sticky lang bar.
+  topBuyBtn?.addEventListener("click", () => {
     if (!buyBtn.disabled) openModal();
   });
 

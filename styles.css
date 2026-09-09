@@ -174,6 +174,26 @@ button {
   .top-countdown__label {
     display: none;
   }
+  .top-buy-btn {
+    width: 100%;
+  }
+}
+
+/* Sticky top-corner Buy Tickets button — sits in the lang bar so it's
+   reachable without scrolling back to the hero or the tickets
+   section. Sized up a step from the default .btn so it reads as a
+   real call-to-action even at this small bar height, not an
+   afterthought next to the countdown. */
+.top-buy-btn {
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-buy-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .lang-btn {
